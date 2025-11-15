@@ -1,6 +1,7 @@
 //
 // Created by loren on 15/11/2025.
 //
+
 #include <stdlib.h>
 
 #include "../includes/liste.h"
