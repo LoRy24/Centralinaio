@@ -14,7 +14,7 @@ Centralina* createCentralina(char nome[17], char coordinate[255]) {
     return centralina;
 }
 
-MisuraGiornaliera* createMisura(char data[11], double temperatura, double umidita, double vVento) {
+MisuraGiornaliera* createMisura(char data[11], const double temperatura, const double umidita, const double vVento) {
     MisuraGiornaliera* misura = malloc(sizeof(MisuraGiornaliera));
     strcpy(misura->data, data);
     misura->temperatura = temperatura;

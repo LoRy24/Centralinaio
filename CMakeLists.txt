@@ -8,4 +8,6 @@ add_executable(Centralinaio src/main.c
         includes/impostazioni.h
         includes/liste.h
         src/liste.c
-        src/centraline.c)
+        src/centraline.c
+        includes/utils.h
+        src/utils.c)

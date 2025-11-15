@@ -10,6 +10,7 @@
 #include "../includes/liste.h"
 #include "../includes/centraline.h"
 #include "../includes/impostazioni.h"
+#include "../includes/utils.h"
 
 // Area dati del programma
 int totaleCentraline = 0;
@@ -22,6 +23,11 @@ void launchMainMenu();
 void printMainMenu(bool error, char errorMessage[256]);
 
 void launchCentralineMenu();
+void printCentralineMenu(bool error, char errorMessage[256]);
+
+void launchRefsMenu();
+
+// Core
 
 // Routine
 int main(void) {
@@ -43,6 +49,7 @@ int main(void) {
 
 // Funzioni programma
 
+// Menu principale
 void launchMainMenu() {
     // Routine del programma (I/O)
     int selection;
@@ -60,10 +67,12 @@ void launchMainMenu() {
         // In base alla selezione
         switch (selection) {
             case '1': {
+                launchCentralineMenu();
                 break;
             }
 
             case '2': {
+                launchRefsMenu();
                 break;
             }
 
@@ -80,23 +89,12 @@ void launchMainMenu() {
     } while (selection != 'q');
 }
 
-void printMainMenu(bool error, char errorMessage[256]) {
+void printMainMenu(const bool error, char errorMessage[256]) {
     // Pulisci lo schermo
     system("cls");
 
     // Scrivi l'intestazione
-    printf("                                                                                                           \n");
-    printf(" @@@@@@@  @@@@@@@@  @@@  @@@  @@@@@@@  @@@@@@@    @@@@@@   @@@       @@@  @@@  @@@   @@@@@@   @@@   @@@@@@ \n");
-    printf("@@@@@@@@  @@@@@@@@  @@@@ @@@  @@@@@@@  @@@@@@@@  @@@@@@@@  @@@       @@@  @@@@ @@@  @@@@@@@@  @@@  @@@@@@@@\n");
-    printf("!@@       @@!       @@!@!@@@    @@!    @@!  @@@  @@!  @@@  @@!       @@!  @@!@!@@@  @@!  @@@  @@!  @@!  @@@\n");
-    printf("!@!       !@!       !@!!@!@!    !@!    !@!  @!@  !@!  @!@  !@!       !@!  !@!!@!@!  !@!  @!@  !@!  !@!  @!@\n");
-    printf("!@!       @!!!:!    @!@ !!@!    @!!    @!@!!@!   @!@!@!@!  @!!       !!@  @!@ !!@!  @!@!@!@!  !!@  @!@  !@!\n");
-    printf("!!!       !!!!!:    !@!  !!!    !!!    !!@!@!    !!!@!!!!  !!!       !!!  !@!  !!!  !!!@!!!!  !!!  !@!  !!!\n");
-    printf(":!!       !!:       !!:  !!!    !!:    !!: :!!   !!:  !!!  !!:       !!:  !!:  !!!  !!:  !!!  !!:  !!:  !!!\n");
-    printf(":!:       :!:       :!:  !:!    :!:    :!:  !:!  :!:  !:!   :!:      :!:  :!:  !:!  :!:  !:!  :!:  :!:  !:!\n");
-    printf(" ::: :::   :: ::::   ::   ::     ::    ::   :::  ::   :::   :: ::::   ::   ::   ::  ::   :::   ::  ::::: ::\n");
-    printf(" :: :: :  : :: ::   ::    :      :      :   : :   :   : :  : :: : :  :    ::    :    :   : :  :     : :  : \n");
-    printf("                                                                                                           \n");
+    printProgramHeader();
 
     // Dettagli
     printf("Versione v1.0.0 made with <3 by Lorenzo Rocca\n\n");
@@ -113,4 +111,34 @@ void printMainMenu(bool error, char errorMessage[256]) {
     if (error) {
         printf("\n[!] %s\n", errorMessage);
     }
+}
+
+// Menu visualizzazione centraline
+void launchCentralineMenu() {
+
+}
+
+void printCentralineMenu(bool error, char errorMessage[256]) {
+
+}
+
+// Riferimenti
+void launchRefsMenu() {
+    // Pulisci lo schermo
+    system("cls");
+
+    // Scrivi l'intestazione
+    printProgramHeader();
+
+    // Scrivi i dettagli
+    printf("Centralinaio v1.0.0 e' un software scritto da Lorenzo Rocca per un compito scolastico. Esso simula\n");
+    printf("in maniera quasi completa un sistema di gestione di un complesso di centraline per effettuare\n");
+    printf("misurazioni delle condizioni meteorologiche.\n\n");
+
+    printf("Per maggiori dettagli sul codice sorgente visita:\n");
+    printf("https://github.com/LoRy24/Centralinaio\n");
+
+    // Info per uscire
+    printf("\nPremi qualsiasi tasto per tornare indietro\n");
+    _getch();
 }
