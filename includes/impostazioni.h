@@ -1,0 +1,10 @@
+//
+// Created by loren on 13/11/2025.
+//
+
+#ifndef CENTRALINAIO_IMPOSTAZIONI_H
+#define CENTRALINAIO_IMPOSTAZIONI_H
+
+
+
+#endif //CENTRALINAIO_IMPOSTAZIONI_H

@@ -1,0 +1,9 @@
+Vogliamo aggiungere ed eliminare centraline.
+
+Ciascuna di queste ha una periodicità di valori normale, e raccoglie tre dati al giorno:
+
+- Temperatura
+- Umidità
+- Velocità del vento
+
+Se la temperatura si alza, e gli altri, di una certa soglia (per ora costante), fai un'altra misurazione.
