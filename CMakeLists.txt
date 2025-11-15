@@ -6,4 +6,6 @@ set(CMAKE_C_STANDARD 23)
 add_executable(Centralinaio src/main.c
         includes/centraline.h
         includes/impostazioni.h
-        includes/liste.h)
+        includes/liste.h
+        src/liste.c
+        src/centraline.c)
