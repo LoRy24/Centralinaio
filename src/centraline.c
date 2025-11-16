@@ -7,10 +7,12 @@
 
 #include "../includes/centraline.h"
 
-Centralina* createCentralina(char nome[17], char coordinate[255]) {
+Centralina* createCentralina(char nome[17], char coordinate[256]) {
     Centralina* centralina = malloc(sizeof(Centralina));
     strcpy(centralina->nome, nome);
     strcpy(centralina->coordinate, coordinate);
+    centralina->totMisurazioni = 0;
+    centralina->misureGiornaliere = nullptr;
     return centralina;
 }
 

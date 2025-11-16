@@ -22,6 +22,7 @@ void remove_top(ListNode** list);
 void remove_bottom(ListNode* node);
 void remove_rec(ListNode* currentNode, int index);
 void remove_from_list(ListNode** list, int index);
+void clear_list(ListNode** list);
 ListNode* create_list(void* value);
 
 #endif //CENTRALINAIO_LISTE_H

@@ -9,7 +9,8 @@
 
 typedef struct centralina_s {
     char nome[17];
-    char coordinate[255];
+    char coordinate[256];
+    int totMisurazioni;
     ListNode* misureGiornaliere;
 } Centralina;
 
@@ -21,7 +22,7 @@ typedef struct misura_s {
 } MisuraGiornaliera;
 
 // Funzioni
-Centralina* createCentralina(char nome[17], char coordinate[255]);
+Centralina* createCentralina(char nome[17], char coordinate[256]);
 MisuraGiornaliera* createMisura(char data[11], double temperatura, double umidita, double vVento);
 
 #endif //CENTRALINAIO_CENTRALINE_H

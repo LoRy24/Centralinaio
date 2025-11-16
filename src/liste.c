@@ -112,6 +112,12 @@ void remove_from_list(ListNode** list, const int index) {
     remove_rec(*list, index);
 }
 
+void clear_list(ListNode** list) {
+    while (*list != nullptr) {
+        remove_from_list(list, 0);
+    }
+}
+
 ListNode* create_list(void* value) {
     ListNode* node = malloc(sizeof(ListNode));
     node->value = value;
